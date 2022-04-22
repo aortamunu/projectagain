@@ -1,0 +1,134 @@
+body{
+    /* background-image: url(/photos/dogs.jpg); */
+    background-size: 1600px 1900px;
+    background-position: 690%;
+  
+  }
+
+  h1{
+      text-align: center;
+      margin: auto;
+  }
+  /* Bordered form */
+  form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 5px;
+    color: black;
+  
+  }
+  
+  input[type=email], input[type=password]:hover{
+    border:2px solid purple;
+    opacity: 0.8;
+  
+  }
+  
+  /* Set a style for all buttons */
+  #login {
+    background-color: #360a69;
+    color: white;
+    font-weight: bolder;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 110%;
+    border-radius: 5px;
+    border: 2px solid purple;
+
+  
+  }
+  
+  /* Add a hover effect for buttons */
+  #login:hover {
+    /* background-color: rgb(94, 6, 89);
+    color: white;  */
+    border: 2px solid white;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  #cancelbtn a {
+    width: auto;
+    padding: 12px 20px;
+    background-color: white;
+    color: rgb(94, 6, 89);
+    font-weight: bolder;
+    float:left;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  /* #cancelbtn a:hover {
+    background-color: rgb(94, 6, 89);
+    color: white;
+  } */
+  
+  /* New member registration ko button */
+  #createaccount a {
+    width:auto;
+    padding: 12px 20px;
+    background-color: white;
+    color: rgb(94, 6, 89);
+    text-decoration: none;
+    font-weight: bolder;
+    float:right;
+    border-radius: 5px;
+  }
+  #createaccount{
+    float:right;
+    margin-right: -37px;
+
+  }
+  
+  /* #createaccount a:hover {
+    background-color: rgb(94, 6, 89);
+    color: white;
+  } */
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    background-color: rgb(214, 198, 219);
+    padding: 80px 80px;
+    max-width: 400px;
+    width: 400px;
+    height: 540px;
+    margin: auto;
+    
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: left;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      background-color: transparent;
+      width: 100%;
+      text-decoration: none;
+    }
+  }
+  
+  #title{
+    width: 200px;
+    margin-left: 90px;
+  }
