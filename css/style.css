@@ -5,15 +5,17 @@
 }
 
 .topnav a.signin{
-    margin-left: 50%;
+    margin-left: 47%;
     background-color: white;
     color: black;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: rgb(118, 10, 173);
+    background-color: transparent;
+    color: black;
     overflow: hidden;
+    border-bottom: 3px solid black;
   }
   
   /* Style the links inside the navigation bar */
@@ -21,24 +23,37 @@
     margin-left: 20px;
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 22px;
   }
+
+  a{
+    font-weight: bolder;
+  }
+
+  .topnav a .highlight{
+    color: rgb(93, 13, 107);
+  }
+
+  .topnav .highlight{
+    height: auto;
+    background-color: rgb(76, 14, 91);
+    color: white;
+  }
   
   /* Change the color of links on hover */
   .topnav a.all:hover {
-    background-color: #ddd;
-    color: black;
+    color: rgb(117, 0, 184);
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.logo {
     margin-right: 80px;
     font-family: cursive;
-    color: white;
+    color: black;
   }
   
   /* Hide the link that should open and close the topnav on small screens */

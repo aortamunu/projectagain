@@ -1,9 +1,10 @@
 * {box-sizing: border-box}
 body{
-  background-image: url(/photos/dogo.jpg);
-  background-size: 1700px 1600px;
-  background-position: 90%;
-  background-repeat: no-repeat;
+    margin: auto;
+  /* background-image: url(/photos/dogo.jpg); */
+  /* background-size: 1600px 1900px;
+  background-position: 690%;
+  background-repeat: no-repeat; */
 }
 
 h1{
@@ -13,19 +14,42 @@ h1{
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
   background-color: rgb(214, 198, 219);
-  border-radius: 20px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  width: 500px;
+  height: 650px;
+  margin: auto;
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 5px;
+    color: black;
+}
+
+input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 5px;
+    color: black;
+}
+input[type=tel]:focus {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 5px;
+    color: black;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -34,10 +58,9 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
+/* hr {
+  border: 1px solid black;
+} */
 
 /* Set a style for the submit/register button */
 .registerbtn {
@@ -56,7 +79,7 @@ hr {
 }
 
 /* Add a blue text color to links */
-a {
+a .terms {
   color:#360a69;
   font-weight: bolder;
 }
@@ -72,14 +95,6 @@ a {
   text-align: center;
 }
 
-.container{
-  max-width: 1000px;
-  width: 600px;
-  margin: auto; 
-  /* background-image: url("dog.jpg"); */
-  background-color: solid white;
-}
-
 label{
   opacity: 600%;
   font-weight: bolder;
@@ -93,3 +108,5 @@ label{
   width: 200px;
   margin-left: 140px;
 }
+
+

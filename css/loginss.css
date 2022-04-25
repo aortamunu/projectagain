@@ -1,7 +1,8 @@
 body{
+    margin: auto;
     /* background-image: url(/photos/dogs.jpg); */
-    background-size: 1600px 1900px;
-    background-position: 690%;
+    /* background-size: 1600px 1900px;
+    background-position: 690%; */
   
   }
 
@@ -15,7 +16,7 @@ body{
   }
   
   /* Full-width inputs */
-  input[type=email], input[type=password] {
+  input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -26,7 +27,7 @@ body{
   
   }
   
-  input[type=email], input[type=password]:hover{
+  input[type=text], input[type=password]:hover{
     border:2px solid purple;
     opacity: 0.8;
   
@@ -40,7 +41,7 @@ body{
     padding: 14px 20px;
     border: none;
     cursor: pointer;
-    width: 110%;
+    width: 100%;
     border-radius: 5px;
     border: 2px solid purple;
 
@@ -83,7 +84,7 @@ body{
   }
   #createaccount{
     float:right;
-    margin-right: -37px;
+    margin-right: -5px;
 
   }
   
@@ -92,19 +93,13 @@ body{
     color: white;
   } */
   
-  /* Center the avatar image inside this container */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-  
   /* Add padding to containers */
   .container {
     background-color: rgb(214, 198, 219);
     padding: 80px 80px;
-    max-width: 400px;
-    width: 400px;
-    height: 540px;
+    border-radius: 15px;
+    width: 500px;
+    height: 650px;
     margin: auto;
     
   }

@@ -15,7 +15,7 @@
   <a href="adopt.php" class="all">Adopt</a> <!-- if you want to adopt animals, click here -->
   <a href="learn.php" class="all">Learn</a> <!-- if you want to learn about animals, click here -->
   <a href="foster.php" class="all">Foster</a> <!-- if you want to foster animals in need, click here -->
-  <a href="share.php" class="all">Share</a> <!-- if you want to share about your ideas related to animals, click here -->
+  <a class="highlight" href="share.php" class="all">Share</a> <!-- if you want to share about your ideas related to animals, click here -->
   <a class="signin" href="login.php">Sign in</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
