@@ -10,6 +10,18 @@
     color: black;
 }
 
+/* logged in user ko lagi */
+/* .topnav .loggedin .usericon{
+    margin-right: -30%;
+    background-color: white;
+    color: black;
+} */
+.topnav .loggedin {
+    margin-left: 40%;
+    background-color: white;
+    color: black;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: transparent;
@@ -85,3 +97,7 @@
       text-align: left;
     }
   }
+
+
+
+

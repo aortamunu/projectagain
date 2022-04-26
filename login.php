@@ -1,3 +1,63 @@
+<?php
+session_start();
+
+//check if the user is already logged in
+if(isset($_SESSION['username']))
+{
+  header("location: welcome.php");
+  exit;
+}
+require_once "config.php";
+
+$username = $password = "";
+$err = "";
+
+//if request method is post
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+  if(empty(trim($_POST['username'])) || empty(trim($_POST['password'])))
+  {
+    $err = "Please enter username and password";
+  }
+  else{
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+  }
+  if(empty($err))
+  {
+    $sql = "SELECT id, username, password FROM users WHERE username = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $param_username);
+    $param_username = $username;
+
+    //try to execute this statement
+    if(mysqli_stmt_execute($stmt)){
+      mysqli_stmt_store_result($stmt);
+      if(mysqli_stmt_num_rows($stmt) == 1)
+        {
+          mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+          if(mysqli_stmt_fetch($stmt))
+          {
+            if(password_verify($password, $hashed_password))
+            {
+              //This means the password is correct. Allow user to login.
+              session_start();
+              $_SESSION["username"] = $username;
+              $_SESSION["id"] = $id;
+              $_SESSION["loggedin"] = true;
+
+              //Redirect user to welcome page
+              header("location: welcome.php");
+
+            }
+          }
+        }
+  }
+  }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,12 +67,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Section</title>
   <link rel="stylesheet" href="css/loginss.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-  <form action="login.php" method="post">
+  <form action="" method="post">
   <div class="topnav" id="myTopnav">
     <a class="logo" href="index.php"><b>Adopt Me</b></a>
     <a href="adopt.php" class="all">Adopt</a> <!-- if you want to adopt animals, click here -->
@@ -28,11 +88,11 @@
   
   <div class="container">
       <h1>Login</h1><br><br>
-      <label for="uname"><b>Username</b></label><br>
-      <input class="box" type="text" placeholder="Enter username" name="uname" required><br><br>
+      <label for="username"><b>Username</b></label><br>
+      <input class="box" type="text" placeholder="Enter username" name="username" required><br><br>
 
       <label for="psw"><b>Password</b></label><br>
-      <input class="boxs" type="password" placeholder="Enter Password" name="psw" required><br>
+      <input class="boxs" type="password" placeholder="Enter Password" name="password" required><br>
       <span class="psw"> <a href="#">Forgot password?</a></span><br><br><br>
 
       <br><br><button id="login" type="submit">Login</button>
